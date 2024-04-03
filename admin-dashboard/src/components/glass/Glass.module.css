@@ -1,0 +1,5 @@
+.container {
+  @apply grid h-[97%] w-[97%] rounded-[2rem] bg-[var(--glass)] overflow-hidden;
+
+  grid-template-columns: 11rem auto 20rem;
+}
