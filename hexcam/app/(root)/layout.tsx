@@ -1,5 +1,11 @@
+import StreamVideoProvider from '@/providers/StreamClientProvider';
+
 const RootLayout = ({ children }: React.PropsWithChildren) => {
-  return <main>{children}</main>;
+  return (
+    <main>
+      <StreamVideoProvider>{children}</StreamVideoProvider>
+    </main>
+  );
 };
 
 export default RootLayout;
