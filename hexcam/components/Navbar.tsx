@@ -1,8 +1,7 @@
-'use client';
-
 import { SignedIn, UserButton } from '@clerk/nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
+
 import MobileNav from './MobileNav';
 
 const Navbar = () => {
@@ -13,7 +12,7 @@ const Navbar = () => {
           src='/icons/logo.svg'
           width={32}
           height={32}
-          alt='HexCam Logo'
+          alt='Hex logo'
           className='max-sm:size-10'
         />
         <p className='text-[26px] font-extrabold text-white max-sm:hidden'>
@@ -22,8 +21,9 @@ const Navbar = () => {
       </Link>
       <div className='flex-between gap-5'>
         <SignedIn>
-          <UserButton />
+          <UserButton afterSignOutUrl='/sign-in' />
         </SignedIn>
+
         <MobileNav />
       </div>
     </nav>

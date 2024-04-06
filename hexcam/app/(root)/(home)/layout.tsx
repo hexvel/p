@@ -1,7 +1,15 @@
+import { Metadata } from 'next';
+import { ReactNode } from 'react';
+
 import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
 
-const HomeLayout = ({ children }: React.PropsWithChildren) => {
+export const metadata: Metadata = {
+  title: 'HexCam',
+  description: 'A workspace for your team, powered by Stream Chat and Clerk.',
+};
+
+const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
   return (
     <main className='relative'>
       <Navbar />
@@ -17,4 +25,4 @@ const HomeLayout = ({ children }: React.PropsWithChildren) => {
   );
 };
 
-export default HomeLayout;
+export default RootLayout;
